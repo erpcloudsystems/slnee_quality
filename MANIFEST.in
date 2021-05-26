@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include slnee_quality *.css
+recursive-include slnee_quality *.csv
+recursive-include slnee_quality *.html
+recursive-include slnee_quality *.ico
+recursive-include slnee_quality *.js
+recursive-include slnee_quality *.json
+recursive-include slnee_quality *.md
+recursive-include slnee_quality *.png
+recursive-include slnee_quality *.py
+recursive-include slnee_quality *.svg
+recursive-include slnee_quality *.txt
+recursive-exclude slnee_quality *.pyc
