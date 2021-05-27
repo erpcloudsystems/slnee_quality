@@ -1,0 +1,47 @@
+{
+ "actions": [],
+ "creation": "2021-05-27 10:29:18.412015",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "goal_name",
+  "goal_code",
+  "goal_description"
+ ],
+ "fields": [
+  {
+   "columns": 3,
+   "fieldname": "goal_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Goal Name"
+  },
+  {
+   "columns": 2,
+   "fieldname": "goal_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Goal Code"
+  },
+  {
+   "columns": 6,
+   "fieldname": "goal_description",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Goal Description"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-05-27 15:05:41.615608",
+ "modified_by": "Administrator",
+ "module": "Slnee Quality",
+ "name": "Strategic Goals",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

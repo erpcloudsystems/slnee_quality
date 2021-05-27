@@ -1,0 +1,130 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series",
+ "creation": "2021-05-27 10:17:02.085185",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "plan_details_section",
+  "plan_name",
+  "naming_series",
+  "plan_description",
+  "column_break_4",
+  "start_date",
+  "end_date",
+  "vision",
+  "message",
+  "values",
+  "strategic_goals_section",
+  "strategic_goals_table",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "plan_details_section",
+   "fieldtype": "Section Break",
+   "label": "Plan Details"
+  },
+  {
+   "fieldname": "plan_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Plan Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Plan Code",
+   "options": "PLAN-#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "plan_description",
+   "fieldtype": "Text Editor",
+   "label": "Plan Description"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "vision",
+   "fieldtype": "Small Text",
+   "label": "Vision"
+  },
+  {
+   "fieldname": "message",
+   "fieldtype": "Small Text",
+   "label": "Message"
+  },
+  {
+   "fieldname": "values",
+   "fieldtype": "Small Text",
+   "label": "Values"
+  },
+  {
+   "fieldname": "strategic_goals_section",
+   "fieldtype": "Section Break",
+   "label": "Strategic Goals"
+  },
+  {
+   "fieldname": "strategic_goals_table",
+   "fieldtype": "Table",
+   "label": "Strategic Goals Table",
+   "options": "Strategic Goals"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Strategic Plan",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-05-27 14:59:30.798320",
+ "modified_by": "Administrator",
+ "module": "Slnee Quality",
+ "name": "Strategic Plan",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "restrict_to_domain": "Slnee",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
