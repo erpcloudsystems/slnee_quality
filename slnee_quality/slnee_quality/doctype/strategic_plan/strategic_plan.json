@@ -2,18 +2,18 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "naming_series",
- "creation": "2021-05-27 10:17:02.085185",
+ "autoname": "naming_series:",
+ "creation": "2021-05-27 16:19:28.598196",
  "doctype": "DocType",
- "document_type": "Document",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "plan_details_section",
-  "plan_name",
   "naming_series",
+  "plan_details_section",
+  "plan_code",
+  "plan_name",
   "plan_description",
-  "column_break_4",
+  "column_break_5",
   "start_date",
   "end_date",
   "vision",
@@ -37,12 +37,13 @@
    "reqd": 1
   },
   {
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Plan Code",
-   "options": "PLAN-#####",
-   "reqd": 1
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Strategic Plan",
+   "print_hide": 1,
+   "read_only": 1
   },
   {
    "fieldname": "plan_description",
@@ -50,18 +51,23 @@
    "label": "Plan Description"
   },
   {
-   "fieldname": "column_break_4",
+   "fieldname": "column_break_5",
    "fieldtype": "Column Break"
   },
   {
+   "default": "Today",
    "fieldname": "start_date",
    "fieldtype": "Date",
-   "label": "Start Date"
+   "in_standard_filter": 1,
+   "label": "Start Date",
+   "reqd": 1
   },
   {
    "fieldname": "end_date",
    "fieldtype": "Date",
-   "label": "End Date"
+   "in_standard_filter": 1,
+   "label": "End Date",
+   "reqd": 1
   },
   {
    "fieldname": "vision",
@@ -86,23 +92,45 @@
   {
    "fieldname": "strategic_goals_table",
    "fieldtype": "Table",
-   "label": "Strategic Goals Table",
-   "options": "Strategic Goals"
+   "label": "Main Goals",
+   "options": "Strategic Goals",
+   "reqd": 1
   },
   {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Strategic Plan",
-   "print_hide": 1,
-   "read_only": 1
+   "default": "SPLAN-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "SPLAN-"
+  },
+  {
+   "fieldname": "plan_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Plan Code",
+   "reqd": 1,
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2021-05-27 14:59:30.798320",
+ "links": [
+  {
+   "link_doctype": "Strategic Plan Program",
+   "link_fieldname": "strategic_plan"
+  },
+  {
+   "link_doctype": "Strategic Actions",
+   "link_fieldname": "strategic_plan"
+  },
+  {
+   "link_doctype": "Operational Plan",
+   "link_fieldname": "strategic_plan"
+  }
+ ],
+ "modified": "2021-06-03 14:00:00.007374",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Strategic Plan",
@@ -121,9 +149,9 @@
    "write": 1
   }
  ],
- "restrict_to_domain": "Slnee",
  "sort_field": "modified",
  "sort_order": "DESC",
+ "title_field": "plan_name",
  "track_changes": 1,
  "track_seen": 1,
  "track_views": 1

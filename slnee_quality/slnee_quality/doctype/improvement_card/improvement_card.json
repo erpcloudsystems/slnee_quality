@@ -1,0 +1,203 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2021-06-03 17:53:38.307755",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "request",
+  "technical_systems_section",
+  "automate_request",
+  "number_of_duplication",
+  "number_of_executers",
+  "electronic_system",
+  "system_name",
+  "column_break_8",
+  "workflow",
+  "suggested_improvement",
+  "human_resources_section",
+  "employees",
+  "specialization",
+  "number",
+  "column_break_16",
+  "suggested_improvement_2",
+  "structure_section",
+  "structure_table",
+  "measurement_indicators_section",
+  "indicators",
+  "exist",
+  "indicator_name",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "request",
+   "fieldtype": "Link",
+   "label": "Request",
+   "options": "Business Engineering Request"
+  },
+  {
+   "fieldname": "technical_systems_section",
+   "fieldtype": "Section Break",
+   "label": "Technical Systems"
+  },
+  {
+   "fieldname": "automate_request",
+   "fieldtype": "Select",
+   "label": "Automate Request",
+   "options": "Automated\nNon Automated"
+  },
+  {
+   "fieldname": "number_of_duplication",
+   "fieldtype": "Int",
+   "label": "Number Of Duplication"
+  },
+  {
+   "fieldname": "workflow",
+   "fieldtype": "Small Text",
+   "label": "Workflow"
+  },
+  {
+   "fieldname": "number_of_executers",
+   "fieldtype": "Int",
+   "label": "Number Of Executers"
+  },
+  {
+   "fieldname": "suggested_improvement",
+   "fieldtype": "Small Text",
+   "label": "Suggested Improvement"
+  },
+  {
+   "default": "0",
+   "fieldname": "electronic_system",
+   "fieldtype": "Check",
+   "label": "Electronic System"
+  },
+  {
+   "depends_on": "eval:doc.electronic_system",
+   "fieldname": "system_name",
+   "fieldtype": "Data",
+   "label": "System Name"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "IMP-CARD-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "IMP-CARD-"
+  },
+  {
+   "fieldname": "human_resources_section",
+   "fieldtype": "Section Break",
+   "label": "Human Resources"
+  },
+  {
+   "fieldname": "employees",
+   "fieldtype": "Data",
+   "label": "Employees"
+  },
+  {
+   "fieldname": "specialization",
+   "fieldtype": "Data",
+   "label": "Specialization"
+  },
+  {
+   "fieldname": "number",
+   "fieldtype": "Int",
+   "label": "Number"
+  },
+  {
+   "fieldname": "suggested_improvement_2",
+   "fieldtype": "Small Text",
+   "label": "Suggested Improvement"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "structure_section",
+   "fieldtype": "Section Break",
+   "label": "Structure"
+  },
+  {
+   "fieldname": "structure_table",
+   "fieldtype": "Table",
+   "label": "Structure",
+   "options": "Structure Table"
+  },
+  {
+   "fieldname": "measurement_indicators_section",
+   "fieldtype": "Section Break",
+   "label": "Measurement Indicators"
+  },
+  {
+   "fieldname": "indicators",
+   "fieldtype": "Select",
+   "label": "Indicators",
+   "options": "Strategical\nBasic Administrative\nOperational"
+  },
+  {
+   "default": "0",
+   "fieldname": "exist",
+   "fieldtype": "Check",
+   "label": "Exist"
+  },
+  {
+   "depends_on": "eval:doc.exist",
+   "fieldname": "indicator_name",
+   "fieldtype": "Data",
+   "label": "Indicator Name"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Improvement Card",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Business Engineering Request",
+   "link_fieldname": "improvement_card"
+  }
+ ],
+ "modified": "2021-06-07 19:14:54.186513",
+ "modified_by": "Administrator",
+ "module": "Slnee Quality",
+ "name": "Improvement Card",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

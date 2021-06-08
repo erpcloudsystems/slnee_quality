@@ -1,0 +1,32 @@
+{
+ "custom_fields": [],
+ "custom_perms": [],
+ "doctype": "Strategic Goals",
+ "property_setters": [
+  {
+   "_assign": null,
+   "_comments": null,
+   "_liked_by": null,
+   "_user_tags": null,
+   "creation": "2021-06-02 14:49:11.101247",
+   "default_value": null,
+   "doc_type": "Strategic Goals",
+   "docstatus": 0,
+   "doctype_or_field": "DocType",
+   "field_name": null,
+   "idx": 0,
+   "modified": "2021-06-02 14:49:11.101247",
+   "modified_by": "Administrator",
+   "name": "Strategic Goals-main-search_fields",
+   "owner": "Administrator",
+   "parent": null,
+   "parentfield": null,
+   "parenttype": null,
+   "property": "search_fields",
+   "property_type": "Data",
+   "row_name": null,
+   "value": "goal_name,goal_code"
+  }
+ ],
+ "sync_on_migrate": 1
+}

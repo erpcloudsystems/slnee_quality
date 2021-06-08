@@ -1,0 +1,46 @@
+{
+ "actions": [],
+ "creation": "2021-06-03 18:19:08.593954",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "department",
+  "actual_work_is_compatible_with_structure",
+  "reason"
+ ],
+ "fields": [
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "actual_work_is_compatible_with_structure",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Actual Work Is Compatible With Structure",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Reason"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-03 18:20:17.916907",
+ "modified_by": "Administrator",
+ "module": "Slnee Quality",
+ "name": "Structure Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

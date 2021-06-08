@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2021-05-31 17:46:45.922333",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "applicant",
+  "request_type",
+  "applicants_remarks",
+  "column_break_4",
+  "posting_date",
+  "attach_7",
+  "attach_8",
+  "attach_9",
+  "notes",
+  "operational_plan",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "REQ-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "REQ-"
+  },
+  {
+   "fieldname": "applicant",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Applicant",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "request_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Request Type",
+   "options": "\nAction Documentation Request\nAction Improvement Request\nDevelopment Study Request\nAction Modification Request",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Posting Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Request",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "attach_7",
+   "fieldtype": "Attach",
+   "hidden": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "attach_8",
+   "fieldtype": "Attach",
+   "hidden": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "attach_9",
+   "fieldtype": "Attach",
+   "hidden": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "applicants_remarks",
+   "fieldtype": "Small Text",
+   "label": "Applicant's Remarks",
+   "read_only": 1
+  },
+  {
+   "fieldname": "operational_plan",
+   "fieldtype": "Link",
+   "label": "Operational Plan",
+   "options": "Operational Plan"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-06-03 14:04:01.381885",
+ "modified_by": "Administrator",
+ "module": "Slnee Quality",
+ "name": "Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "applicant",
+ "track_changes": 1
+}

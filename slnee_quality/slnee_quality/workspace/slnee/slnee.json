@@ -12,18 +12,8 @@
  "is_default": 0,
  "is_standard": 1,
  "label": "Slnee",
- "links": [
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Strategic Plan",
-   "link_to": "Strategic Plan",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  }
- ],
- "modified": "2021-05-27 13:40:45.826254",
+ "links": [],
+ "modified": "2021-06-03 18:36:37.787086",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Slnee",

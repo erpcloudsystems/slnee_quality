@@ -1,0 +1,277 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2021-06-03 16:12:20.553568",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "action_card_details_section",
+  "level_one",
+  "naming_series",
+  "action_goal",
+  "column_break_5",
+  "level_two",
+  "request",
+  "action_owner",
+  "column_break_8",
+  "level_three",
+  "action_type",
+  "beneficiaries",
+  "job_roles_section",
+  "number_of_action_executers",
+  "usage_rate",
+  "technical_systems_used",
+  "inputs",
+  "outputs",
+  "limitations",
+  "required_conditions",
+  "column_break_18",
+  "action_executers",
+  "estimated_duration_for_execution",
+  "privacy_level",
+  "programs_tools_used",
+  "departments",
+  "escalation_mechanism",
+  "action_description_with_details_section",
+  "action_description_details",
+  "systems_regulations_for_creating_action_section",
+  "systems_regulations_table",
+  "performance_measurement_indicators_section",
+  "performance_measurement_indicators",
+  "used_templates_section",
+  "used_templates",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "CARD-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Action Code",
+   "options": "CARD-",
+   "read_only": 1
+  },
+  {
+   "fieldname": "level_one",
+   "fieldtype": "Data",
+   "label": "Level One"
+  },
+  {
+   "fieldname": "level_two",
+   "fieldtype": "Data",
+   "label": "Level Two"
+  },
+  {
+   "fieldname": "level_three",
+   "fieldtype": "Data",
+   "label": "Level Three"
+  },
+  {
+   "fetch_from": "request.applicant",
+   "fieldname": "action_owner",
+   "fieldtype": "Data",
+   "label": "Action Owner"
+  },
+  {
+   "fieldname": "action_type",
+   "fieldtype": "Select",
+   "label": "Action Type",
+   "options": "Auto\nManual\nAuto & Manual"
+  },
+  {
+   "fieldname": "beneficiaries",
+   "fieldtype": "Data",
+   "label": "Beneficiaries"
+  },
+  {
+   "fieldname": "action_card_details_section",
+   "fieldtype": "Section Break",
+   "label": "Action Card Details"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "request",
+   "fieldtype": "Link",
+   "label": "Business Engineering Request",
+   "options": "Business Engineering Request"
+  },
+  {
+   "fieldname": "action_goal",
+   "fieldtype": "Data",
+   "label": "Action Goal"
+  },
+  {
+   "fieldname": "number_of_action_executers",
+   "fieldtype": "Int",
+   "label": "Number Of Action Executers"
+  },
+  {
+   "fieldname": "usage_rate",
+   "fieldtype": "Select",
+   "label": "Usage Rate",
+   "options": "Daily\nMonthly\nSemi Annual\nYearly\nUpon Request"
+  },
+  {
+   "fieldname": "technical_systems_used",
+   "fieldtype": "Data",
+   "label": "Technical Systems Used"
+  },
+  {
+   "fieldname": "inputs",
+   "fieldtype": "Data",
+   "label": "Inputs"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "action_executers",
+   "fieldtype": "Data",
+   "label": "Action Executers"
+  },
+  {
+   "fieldname": "estimated_duration_for_execution",
+   "fieldtype": "Data",
+   "label": "Estimated Duration For Execution"
+  },
+  {
+   "fieldname": "privacy_level",
+   "fieldtype": "Select",
+   "label": "Privacy Level",
+   "options": "Secured\nUnsecured"
+  },
+  {
+   "fieldname": "programs_tools_used",
+   "fieldtype": "Data",
+   "label": "Programs & Tools Used"
+  },
+  {
+   "fieldname": "outputs",
+   "fieldtype": "Data",
+   "label": "Outputs"
+  },
+  {
+   "fieldname": "limitations",
+   "fieldtype": "Data",
+   "label": "Limitations"
+  },
+  {
+   "fieldname": "departments",
+   "fieldtype": "Table",
+   "label": "Paticipants",
+   "options": "Departments Table"
+  },
+  {
+   "fieldname": "required_conditions",
+   "fieldtype": "Small Text",
+   "label": "Required Conditions"
+  },
+  {
+   "fieldname": "escalation_mechanism",
+   "fieldtype": "Small Text",
+   "label": "Escalation Mechanism"
+  },
+  {
+   "fieldname": "job_roles_section",
+   "fieldtype": "Section Break",
+   "label": "Job Roles"
+  },
+  {
+   "fieldname": "action_description_with_details_section",
+   "fieldtype": "Section Break",
+   "label": "Action Description Details"
+  },
+  {
+   "fieldname": "action_description_details",
+   "fieldtype": "Table",
+   "label": "Action Description Details",
+   "options": "Action Description Details"
+  },
+  {
+   "fieldname": "systems_regulations_for_creating_action_section",
+   "fieldtype": "Section Break",
+   "label": "Systems & Regulations For Creating Action"
+  },
+  {
+   "fieldname": "systems_regulations_table",
+   "fieldtype": "Table",
+   "label": "Systems & Regulations",
+   "options": "Systems Regulations Table"
+  },
+  {
+   "fieldname": "performance_measurement_indicators_section",
+   "fieldtype": "Section Break",
+   "label": "Performance Measurement Indicators"
+  },
+  {
+   "fieldname": "performance_measurement_indicators",
+   "fieldtype": "Table",
+   "label": "Performance Measurement Indicators",
+   "options": "Performance Measurement Indicators"
+  },
+  {
+   "fieldname": "used_templates_section",
+   "fieldtype": "Section Break",
+   "label": "Used Templates"
+  },
+  {
+   "fieldname": "used_templates",
+   "fieldtype": "Table",
+   "label": "Used Templates",
+   "options": "Used Templates"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Action Card",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Business Engineering Request",
+   "link_fieldname": "action_card"
+  }
+ ],
+ "modified": "2021-06-07 19:43:05.489122",
+ "modified_by": "Administrator",
+ "module": "Slnee Quality",
+ "name": "Action Card",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "action_owner",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

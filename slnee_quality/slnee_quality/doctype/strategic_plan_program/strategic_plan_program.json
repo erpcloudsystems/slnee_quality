@@ -1,0 +1,228 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2021-05-28 15:18:08.070714",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "strategic_plan_details_section",
+  "strategic_plan",
+  "plan_name",
+  "strategic_goals_table",
+  "program_card_section",
+  "program_name",
+  "description_and_scope_of_work",
+  "beneficiaries",
+  "direct_relationship_holders",
+  "nature",
+  "execution_nature",
+  "column_break_9",
+  "program_number",
+  "program_execution_term",
+  "expected_execution_duration",
+  "program_main_outputs",
+  "desired_benefits",
+  "key_success_factors",
+  "section_break_18",
+  "stages_of_execution_of_the_scope_of_work",
+  "sub_goals_section",
+  "sub_goals_table",
+  "actions_section",
+  "actions_table",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "strategic_plan_details_section",
+   "fieldtype": "Section Break",
+   "label": "Strategic Plan Details"
+  },
+  {
+   "fieldname": "strategic_plan",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Approved Strategic Plan",
+   "options": "Strategic Plan",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.strategic_plan",
+   "fetch_from": "strategic_plan.strategic_goals_table",
+   "fieldname": "strategic_goals_table",
+   "fieldtype": "Table",
+   "label": "Main Goals",
+   "options": "Strategic Goals"
+  },
+  {
+   "fieldname": "program_card_section",
+   "fieldtype": "Section Break",
+   "label": "Program Card"
+  },
+  {
+   "fieldname": "program_name",
+   "fieldtype": "Data",
+   "label": "Program Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description_and_scope_of_work",
+   "fieldtype": "Small Text",
+   "label": "Description And Scope Of Work"
+  },
+  {
+   "fieldname": "beneficiaries",
+   "fieldtype": "Table",
+   "label": "Beneficiaries",
+   "options": "Beneficiaries"
+  },
+  {
+   "fieldname": "direct_relationship_holders",
+   "fieldtype": "Data",
+   "label": "Direct Relationship Holders"
+  },
+  {
+   "fieldname": "nature",
+   "fieldtype": "Data",
+   "label": "Nature"
+  },
+  {
+   "fieldname": "execution_nature",
+   "fieldtype": "Data",
+   "label": "Execution Nature"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "program_number",
+   "fieldtype": "Data",
+   "label": "Program Number",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "program_execution_term",
+   "fieldtype": "Select",
+   "label": "Program Execution  Term",
+   "options": "\nShort Term\nMedium Term\nLong Term"
+  },
+  {
+   "fieldname": "program_main_outputs",
+   "fieldtype": "Small Text",
+   "label": "Program Main Outputs"
+  },
+  {
+   "fieldname": "desired_benefits",
+   "fieldtype": "Small Text",
+   "label": "Desired Benefits"
+  },
+  {
+   "fieldname": "key_success_factors",
+   "fieldtype": "Small Text",
+   "label": "Key Success Factors"
+  },
+  {
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "stages_of_execution_of_the_scope_of_work",
+   "fieldtype": "Text Editor",
+   "label": "Stages Of Execution Of The Scope Of Work"
+  },
+  {
+   "fieldname": "sub_goals_section",
+   "fieldtype": "Section Break",
+   "label": "Sub Goals Details"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Strategic Plan Program",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "expected_execution_duration",
+   "fieldtype": "Int",
+   "label": " Expected Execution Duration"
+  },
+  {
+   "default": "PROG-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "PROG-"
+  },
+  {
+   "fieldname": "sub_goals_table",
+   "fieldtype": "Table",
+   "label": "Sub Goals",
+   "options": "Sub Goals"
+  },
+  {
+   "depends_on": "eval:!(doc.__islocal) && doc.sub_goals_table",
+   "fieldname": "actions_section",
+   "fieldtype": "Section Break",
+   "label": "Actions Details"
+  },
+  {
+   "fieldname": "actions_table",
+   "fieldtype": "Table",
+   "label": "Actions Table",
+   "options": "Actions Table"
+  },
+  {
+   "fetch_from": "strategic_plan.plan_name",
+   "fieldname": "plan_name",
+   "fieldtype": "Data",
+   "label": "Plan Name",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Strategic Actions",
+   "link_fieldname": "linked_program"
+  },
+  {
+   "link_doctype": "Operational Plan",
+   "link_fieldname": "program"
+  }
+ ],
+ "modified": "2021-06-07 18:04:37.143526",
+ "modified_by": "Administrator",
+ "module": "Slnee Quality",
+ "name": "Strategic Plan Program",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "program_name",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

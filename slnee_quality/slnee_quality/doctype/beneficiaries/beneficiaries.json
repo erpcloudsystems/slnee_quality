@@ -1,0 +1,37 @@
+{
+ "actions": [],
+ "creation": "2021-05-28 01:29:12.743061",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "internal_beneficiaries",
+  "external_beneficiaries"
+ ],
+ "fields": [
+  {
+   "fieldname": "internal_beneficiaries",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Internal Beneficiaries"
+  },
+  {
+   "fieldname": "external_beneficiaries",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "External Beneficiaries"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-05-28 01:29:21.505492",
+ "modified_by": "Administrator",
+ "module": "Slnee Quality",
+ "name": "Beneficiaries",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

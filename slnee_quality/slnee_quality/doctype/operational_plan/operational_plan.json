@@ -1,0 +1,199 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2021-05-31 14:01:22.381905",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "plan_details_section",
+  "plan_code",
+  "plan_name",
+  "plan_description",
+  "column_break_5",
+  "start_date",
+  "end_date",
+  "progress",
+  "departments",
+  "actions_details",
+  "program",
+  "strategic_plan",
+  "strategic_plan_name",
+  "actions_table",
+  "section_break_16",
+  "stages_table",
+  "missions_table",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "OPLAN-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "OPLAN-"
+  },
+  {
+   "fieldname": "plan_details_section",
+   "fieldtype": "Section Break",
+   "label": "Plan Details"
+  },
+  {
+   "fieldname": "plan_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Plan Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "plan_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Plan Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "plan_description",
+   "fieldtype": "Text Editor",
+   "label": "Plan Description"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "label": "Strategic Plan Program",
+   "options": "Strategic Plan Program"
+  },
+  {
+   "depends_on": "eval:doc.strategic_plan",
+   "fieldname": "actions_table",
+   "fieldtype": "Table",
+   "label": "Actions Table",
+   "options": "Actions Table"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Operational Plan",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "departments",
+   "fieldtype": "Table",
+   "label": "Departments",
+   "options": "Departments Table"
+  },
+  {
+   "fieldname": "actions_details",
+   "fieldtype": "Section Break",
+   "label": "Program Details"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "progress",
+   "fieldtype": "Percent",
+   "label": "Progress (%)",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "program.strategic_plan",
+   "fieldname": "strategic_plan",
+   "fieldtype": "Link",
+   "label": "Strategic Plan",
+   "options": "Strategic Plan",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "program.plan_name",
+   "fieldname": "strategic_plan_name",
+   "fieldtype": "Data",
+   "label": "Strategic Plan Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "stages_table",
+   "fieldtype": "Table",
+   "label": "Stages Table",
+   "options": "Stages Table"
+  },
+  {
+   "depends_on": "eval:!(doc.__islocal) && doc.missions_table",
+   "fieldname": "missions_table",
+   "fieldtype": "Table",
+   "label": "Missions Table",
+   "options": "Missions Table"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Business Engineering Request",
+   "link_fieldname": "operational_plan"
+  },
+  {
+   "link_doctype": "Mission",
+   "link_fieldname": "operational_plan"
+  },
+  {
+   "link_doctype": "Schedule Meeting",
+   "link_fieldname": "operational_plan"
+  }
+ ],
+ "modified": "2021-06-07 17:44:13.171792",
+ "modified_by": "Administrator",
+ "module": "Slnee Quality",
+ "name": "Operational Plan",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "plan_name",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
