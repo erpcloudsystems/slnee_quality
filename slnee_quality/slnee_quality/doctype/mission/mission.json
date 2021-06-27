@@ -13,6 +13,7 @@
   "operational_plan",
   "status",
   "column_break_4",
+  "posting_date",
   "start_date",
   "duration",
   "mission_details_section",
@@ -89,11 +90,18 @@
    "hidden": 1,
    "label": "Mission Table",
    "options": "Missions Table"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-06-03 20:06:57.872546",
+ "modified": "2021-06-09 15:15:52.759099",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Mission",

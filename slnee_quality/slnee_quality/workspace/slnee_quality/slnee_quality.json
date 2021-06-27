@@ -1,5 +1,5 @@
 {
- "cards_label": "Slnee",
+ "cards_label": "Slnee Quality",
  "category": "Modules",
  "charts": [],
  "creation": "2021-05-28 14:55:59.276858",
@@ -105,6 +105,15 @@
   {
    "hidden": 0,
    "is_query_report": 0,
+   "label": "Meeting Record",
+   "link_to": "Meeting Record",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Calendar View",
    "link_to": "Calendar View",
    "link_type": "DocType",
@@ -190,7 +199,7 @@
    "type": "Link"
   }
  ],
- "modified": "2021-06-06 18:21:26.831228",
+ "modified": "2021-06-27 04:09:21.409623",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Slnee Quality",

@@ -15,6 +15,7 @@
   "measurement_responsibilty",
   "description",
   "column_break_7",
+  "posting_date",
   "calculation_method",
   "target",
   "indicator_periodicity",
@@ -100,11 +101,18 @@
    "hidden": 1,
    "label": "Naming Series",
    "options": "IND-"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-06-03 12:13:04.637810",
+ "modified": "2021-06-09 15:13:09.406871",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Strategic Indicators Card",

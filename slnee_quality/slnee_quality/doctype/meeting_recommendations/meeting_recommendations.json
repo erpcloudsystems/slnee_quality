@@ -1,0 +1,44 @@
+{
+ "actions": [],
+ "creation": "2021-06-27 03:49:59.791391",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "recommendation",
+  "responsible_for_execution",
+  "execution_duration"
+ ],
+ "fields": [
+  {
+   "fieldname": "recommendation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Recommendation"
+  },
+  {
+   "fieldname": "responsible_for_execution",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Responsible For Execution"
+  },
+  {
+   "fieldname": "execution_duration",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Execution Duration"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-27 03:56:30.848067",
+ "modified_by": "Administrator",
+ "module": "Slnee Quality",
+ "name": "Meeting Recommendations",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

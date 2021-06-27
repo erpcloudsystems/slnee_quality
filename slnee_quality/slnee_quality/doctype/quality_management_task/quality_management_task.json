@@ -12,6 +12,7 @@
   "completed_by",
   "review",
   "column_break_4",
+  "posting_date",
   "start_date",
   "duration",
   "task_details_section",
@@ -36,7 +37,8 @@
    "fieldtype": "Date",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Start Date"
+   "label": "Start Date",
+   "reqd": 1
   },
   {
    "fieldname": "duration",
@@ -70,11 +72,18 @@
    "fieldname": "review",
    "fieldtype": "Rating",
    "label": "Review"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-06-03 22:01:09.149815",
+ "modified": "2021-06-09 15:18:58.308019",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Quality Management Task",

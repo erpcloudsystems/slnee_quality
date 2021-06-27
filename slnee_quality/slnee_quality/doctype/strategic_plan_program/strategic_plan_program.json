@@ -9,6 +9,7 @@
  "engine": "InnoDB",
  "field_order": [
   "naming_series",
+  "posting_date",
   "strategic_plan_details_section",
   "strategic_plan",
   "plan_name",
@@ -186,6 +187,13 @@
    "fieldtype": "Data",
    "label": "Plan Name",
    "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -200,7 +208,7 @@
    "link_fieldname": "program"
   }
  ],
- "modified": "2021-06-07 18:04:37.143526",
+ "modified": "2021-06-09 15:10:03.331308",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Strategic Plan Program",

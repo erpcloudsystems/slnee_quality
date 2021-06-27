@@ -10,6 +10,8 @@
  "field_order": [
   "naming_series",
   "request",
+  "column_break_3",
+  "posting_date",
   "technical_systems_section",
   "automate_request",
   "number_of_duplication",
@@ -166,6 +168,18 @@
    "options": "Improvement Card",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -176,7 +190,7 @@
    "link_fieldname": "improvement_card"
   }
  ],
- "modified": "2021-06-07 19:14:54.186513",
+ "modified": "2021-06-09 15:23:04.962089",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Improvement Card",

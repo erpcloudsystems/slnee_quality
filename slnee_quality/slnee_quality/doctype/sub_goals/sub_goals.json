@@ -34,7 +34,7 @@
    "fieldtype": "Column Break"
   },
   {
-   "columns": 5,
+   "columns": 6,
    "fetch_from": "sub_goal_code.sub_goal_description",
    "fieldname": "sub_goal_description",
    "fieldtype": "Small Text",
@@ -53,7 +53,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2021-06-02 15:01:07.789624",
+ "modified": "2021-06-14 13:48:14.866251",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Sub Goals",

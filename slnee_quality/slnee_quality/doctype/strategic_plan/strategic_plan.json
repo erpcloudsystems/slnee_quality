@@ -14,6 +14,7 @@
   "plan_name",
   "plan_description",
   "column_break_5",
+  "posting_date",
   "start_date",
   "end_date",
   "vision",
@@ -55,7 +56,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "default": "Today",
    "fieldname": "start_date",
    "fieldtype": "Date",
    "in_standard_filter": 1,
@@ -112,6 +112,13 @@
    "label": "Plan Code",
    "reqd": 1,
    "unique": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -130,7 +137,7 @@
    "link_fieldname": "strategic_plan"
   }
  ],
- "modified": "2021-06-03 14:00:00.007374",
+ "modified": "2021-06-09 15:06:21.631461",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Strategic Plan",

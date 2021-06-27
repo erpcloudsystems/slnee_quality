@@ -14,6 +14,7 @@
   "plan_name",
   "plan_description",
   "column_break_5",
+  "posting_date",
   "start_date",
   "end_date",
   "progress",
@@ -68,7 +69,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "default": "Today",
    "fieldname": "start_date",
    "fieldtype": "Date",
    "in_standard_filter": 1,
@@ -153,6 +153,13 @@
    "fieldtype": "Table",
    "label": "Missions Table",
    "options": "Missions Table"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -171,7 +178,7 @@
    "link_fieldname": "operational_plan"
   }
  ],
- "modified": "2021-06-07 17:44:13.171792",
+ "modified": "2021-06-09 15:14:36.627195",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Operational Plan",

@@ -8,6 +8,7 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "posting_date",
   "action_card_details_section",
   "level_one",
   "naming_series",
@@ -239,6 +240,14 @@
    "options": "Action Card",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Posting Date",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -249,7 +258,7 @@
    "link_fieldname": "action_card"
   }
  ],
- "modified": "2021-06-07 19:43:05.489122",
+ "modified": "2021-06-09 15:21:27.784683",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Action Card",

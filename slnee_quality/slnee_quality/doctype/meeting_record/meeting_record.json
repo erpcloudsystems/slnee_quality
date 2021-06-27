@@ -1,0 +1,174 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2021-06-27 03:29:11.246349",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "meeting_subject",
+  "meeting_location",
+  "meeting_date",
+  "column_break_5",
+  "start_time",
+  "end_time",
+  "section_break_8",
+  "attendance",
+  "meeting_items",
+  "outputs",
+  "meeting_recommendations",
+  "section_break_13",
+  "record_prepared_by",
+  "meeting_duration",
+  "meeting_no",
+  "column_break_17",
+  "record_prepared_date",
+  "next_meeting_date",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "REC-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "REC-",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Meeting Record",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "meeting_subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Meeting Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "meeting_location",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Meeting Location"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "meeting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Meeting Date"
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Time",
+   "label": "Start Time"
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Time",
+   "label": "End Time"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "attendance",
+   "fieldtype": "Table",
+   "label": "Attendance",
+   "options": "Attendance Table"
+  },
+  {
+   "fieldname": "meeting_items",
+   "fieldtype": "Table",
+   "label": "Meeting Items",
+   "options": "Meeting Items Table"
+  },
+  {
+   "fieldname": "outputs",
+   "fieldtype": "Table",
+   "label": "Outputs",
+   "options": "Meeting Outputs Table"
+  },
+  {
+   "fieldname": "meeting_recommendations",
+   "fieldtype": "Table",
+   "label": "Meeting Recommendations & Decisions",
+   "options": "Meeting Recommendations"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "record_prepared_by",
+   "fieldtype": "Data",
+   "label": "Record Prepared By"
+  },
+  {
+   "fieldname": "record_prepared_date",
+   "fieldtype": "Date",
+   "label": "Record Prepared Date"
+  },
+  {
+   "fieldname": "meeting_duration",
+   "fieldtype": "Data",
+   "label": "Meeting Duration"
+  },
+  {
+   "fieldname": "meeting_no",
+   "fieldtype": "Data",
+   "label": "Meeting No"
+  },
+  {
+   "fieldname": "next_meeting_date",
+   "fieldtype": "Date",
+   "label": "Next Meeting Date"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-06-27 04:08:32.120265",
+ "modified_by": "Administrator",
+ "module": "Slnee Quality",
+ "name": "Meeting Record",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "meeting_subject",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
