@@ -1,0 +1,129 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2021-07-06 19:11:15.218570",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "procedure_details_section",
+  "naming_series",
+  "procedure_name",
+  "classification",
+  "procedure_type",
+  "repetition_rate",
+  "procedure_owner",
+  "column_break_6",
+  "execution_responsibility",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "\nA-\nE-\nS-",
+   "read_only": 1
+  },
+  {
+   "fieldname": "procedure_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Procedure Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "classification",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Classification",
+   "options": "\nAdministrative (A)\nEssential (E)\nSupportive (S)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "repetition_rate",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Repetition Rate",
+   "options": "\nDaily\nWeekly\nMonthly\nAnnually",
+   "reqd": 1
+  },
+  {
+   "fieldname": "procedure_owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Procedure Owner",
+   "options": "Department",
+   "reqd": 1
+  },
+  {
+   "fieldname": "execution_responsibility",
+   "fieldtype": "Table",
+   "label": "Execution Responsibility",
+   "options": "Execution Responsibility Table"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Procedure Repository",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "procedure_details_section",
+   "fieldtype": "Section Break",
+   "label": "Procedure Details"
+  },
+  {
+   "fieldname": "procedure_type",
+   "fieldtype": "Select",
+   "label": "Procedure Type",
+   "options": "\nAuto\nManual\nAuto & Manual",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Action Card",
+   "link_fieldname": "procedure_repository"
+  }
+ ],
+ "modified": "2021-07-06 21:41:41.315738",
+ "modified_by": "Administrator",
+ "module": "Slnee Quality",
+ "name": "Procedure Repository",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "procedure_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "procedure_name",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

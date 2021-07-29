@@ -43,6 +43,7 @@
    "options": "Business Engineering Request"
   },
   {
+   "collapsible": 1,
    "fieldname": "technical_systems_section",
    "fieldtype": "Section Break",
    "label": "Technical Systems"
@@ -98,6 +99,7 @@
    "options": "IMP-CARD-"
   },
   {
+   "collapsible": 1,
    "fieldname": "human_resources_section",
    "fieldtype": "Section Break",
    "label": "Human Resources"
@@ -127,6 +129,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "collapsible": 1,
    "fieldname": "structure_section",
    "fieldtype": "Section Break",
    "label": "Structure"
@@ -138,6 +141,7 @@
    "options": "Structure Table"
   },
   {
+   "collapsible": 1,
    "fieldname": "measurement_indicators_section",
    "fieldtype": "Section Break",
    "label": "Measurement Indicators"
@@ -190,7 +194,7 @@
    "link_fieldname": "improvement_card"
   }
  ],
- "modified": "2021-06-09 15:23:04.962089",
+ "modified": "2021-07-07 16:34:12.561160",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Improvement Card",

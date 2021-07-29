@@ -14,6 +14,7 @@
   "column_break_4",
   "posting_date",
   "start_date",
+  "unit_of__duration",
   "duration",
   "task_details_section",
   "subject",
@@ -79,11 +80,17 @@
    "fieldtype": "Date",
    "label": "Posting Date",
    "reqd": 1
+  },
+  {
+   "fieldname": "unit_of__duration",
+   "fieldtype": "Select",
+   "label": "Unit Of Duration",
+   "options": "\nDay\nWeek\nMonth\nYear"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-06-09 15:18:58.308019",
+ "modified": "2021-07-07 16:44:25.132052",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Quality Management Task",

@@ -166,6 +166,15 @@
   {
    "hidden": 0,
    "is_query_report": 0,
+   "label": "Procedure Repository",
+   "link_to": "Procedure Repository",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Action Cards",
    "link_to": "Action Card",
    "link_type": "DocType",
@@ -197,9 +206,71 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "General Settings For Procedures",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Procedure Repository",
+   "link_to": "Procedure Repository",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Technical Systems Used",
+   "link_to": "Technical Systems Used",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Programs And Tools Used",
+   "link_to": "Programs And Tools Used",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Procedure Limitations And Conditions",
+   "link_to": "Procedure Limitations And Conditions",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Procedure Inputs",
+   "link_to": "Procedure Inputs",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Procedure Outputs",
+   "link_to": "Procedure Outputs",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2021-06-27 04:09:21.409623",
+ "modified": "2021-07-06 21:51:59.271674",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Slnee Quality",

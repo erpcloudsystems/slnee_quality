@@ -18,8 +18,16 @@ from frappe.model.document import Document
 
 class OperationalPlan(Document):
 	def validate(self):
-		if self.workflow_state == "Approved":
-			self.create_missions()
+		for x in self.missions_table:
+			if self.workflow_state == "Approved" and not x.mission_created:
+				self.create_missions()
+				x.mission_created = 1
+
+	def on_update_after_submit(self):
+		for x in self.missions_table:
+			if self.workflow_state == "Approved" and not x.mission_created:
+				self.create_missions()
+				x.mission_created = 1
 
 	def create_missions(self):
 		for mission in self.missions_table:

@@ -15,6 +15,7 @@
   "column_break_4",
   "posting_date",
   "start_date",
+  "unit_of_execution_duration",
   "duration",
   "mission_details_section",
   "subject",
@@ -97,11 +98,17 @@
    "fieldtype": "Date",
    "label": "Posting Date",
    "reqd": 1
+  },
+  {
+   "fieldname": "unit_of_execution_duration",
+   "fieldtype": "Select",
+   "label": "Unit Of Execution Duration",
+   "options": "\nDay\nWeek\nMonth\nYear"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-06-09 15:15:52.759099",
+ "modified": "2021-07-07 17:44:19.272489",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Mission",

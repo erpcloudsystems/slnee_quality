@@ -17,13 +17,16 @@
   "program_card_section",
   "program_name",
   "description_and_scope_of_work",
-  "beneficiaries",
-  "direct_relationship_holders",
+  "internal_beneficiaries",
+  "external_beneficiaries",
+  "internal_direct_relationship_holders",
+  "external_direct_relationship_holders",
   "nature",
   "execution_nature",
   "column_break_9",
   "program_number",
   "program_execution_term",
+  "unit_of_execution_duration",
   "expected_execution_duration",
   "program_main_outputs",
   "desired_benefits",
@@ -38,6 +41,7 @@
  ],
  "fields": [
   {
+   "collapsible": 1,
    "fieldname": "strategic_plan_details_section",
    "fieldtype": "Section Break",
    "label": "Strategic Plan Details"
@@ -59,6 +63,7 @@
    "options": "Strategic Goals"
   },
   {
+   "collapsible": 1,
    "fieldname": "program_card_section",
    "fieldtype": "Section Break",
    "label": "Program Card"
@@ -73,17 +78,6 @@
    "fieldname": "description_and_scope_of_work",
    "fieldtype": "Small Text",
    "label": "Description And Scope Of Work"
-  },
-  {
-   "fieldname": "beneficiaries",
-   "fieldtype": "Table",
-   "label": "Beneficiaries",
-   "options": "Beneficiaries"
-  },
-  {
-   "fieldname": "direct_relationship_holders",
-   "fieldtype": "Data",
-   "label": "Direct Relationship Holders"
   },
   {
    "fieldname": "nature",
@@ -114,29 +108,34 @@
   },
   {
    "fieldname": "program_main_outputs",
-   "fieldtype": "Small Text",
-   "label": "Program Main Outputs"
+   "fieldtype": "Table",
+   "label": "Program Main Outputs",
+   "options": "Program Main Outputs"
   },
   {
    "fieldname": "desired_benefits",
-   "fieldtype": "Small Text",
-   "label": "Desired Benefits"
+   "fieldtype": "Table",
+   "label": "Desired Benefits",
+   "options": "Desired Benefits"
   },
   {
    "fieldname": "key_success_factors",
-   "fieldtype": "Small Text",
-   "label": "Key Success Factors"
+   "fieldtype": "Table",
+   "label": "Key Success Factors",
+   "options": "Key Success Factors"
   },
   {
+   "collapsible": 1,
    "fieldname": "section_break_18",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "stages_of_execution_of_the_scope_of_work",
-   "fieldtype": "Text Editor",
+   "fieldtype": "Section Break",
    "label": "Stages Of Execution Of The Scope Of Work"
   },
   {
+   "fieldname": "stages_of_execution_of_the_scope_of_work",
+   "fieldtype": "Text Editor"
+  },
+  {
+   "collapsible": 1,
    "fieldname": "sub_goals_section",
    "fieldtype": "Section Break",
    "label": "Sub Goals Details"
@@ -170,6 +169,7 @@
    "options": "Sub Goals"
   },
   {
+   "collapsible": 1,
    "depends_on": "eval:!(doc.__islocal) && doc.sub_goals_table",
    "fieldname": "actions_section",
    "fieldtype": "Section Break",
@@ -194,6 +194,36 @@
    "fieldtype": "Date",
    "label": "Posting Date",
    "reqd": 1
+  },
+  {
+   "fieldname": "unit_of_execution_duration",
+   "fieldtype": "Select",
+   "label": "Unit Of Execution Duration",
+   "options": "\nDay\nWeek\nMonth\nYear"
+  },
+  {
+   "fieldname": "internal_beneficiaries",
+   "fieldtype": "Table",
+   "label": "Internal Beneficiaries",
+   "options": "Departments Table"
+  },
+  {
+   "fieldname": "external_beneficiaries",
+   "fieldtype": "Table",
+   "label": "External Beneficiaries",
+   "options": "External Action Executers Table"
+  },
+  {
+   "fieldname": "internal_direct_relationship_holders",
+   "fieldtype": "Table",
+   "label": "Internal Direct Relationship Holders",
+   "options": "Departments Table"
+  },
+  {
+   "fieldname": "external_direct_relationship_holders",
+   "fieldtype": "Table",
+   "label": "External Direct Relationship Holders",
+   "options": "External Action Executers Table"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -208,7 +238,7 @@
    "link_fieldname": "program"
   }
  ],
- "modified": "2021-06-09 15:10:03.331308",
+ "modified": "2021-07-07 17:12:22.291766",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Strategic Plan Program",

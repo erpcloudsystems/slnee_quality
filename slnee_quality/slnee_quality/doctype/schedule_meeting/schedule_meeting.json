@@ -16,7 +16,6 @@
   "departments",
   "operational_plan",
   "plan_name",
-  "plan_code",
   "column_break_6",
   "posting_date",
   "date",
@@ -115,13 +114,6 @@
    "read_only": 1
   },
   {
-   "fetch_from": "operational_plan.plan_code",
-   "fieldname": "plan_code",
-   "fieldtype": "Data",
-   "label": "Plan Code",
-   "read_only": 1
-  },
-  {
    "allow_on_submit": 1,
    "fieldname": "color",
    "fieldtype": "Color",
@@ -156,8 +148,13 @@
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2021-06-27 04:11:22.131320",
+ "links": [
+  {
+   "link_doctype": "Meeting Record",
+   "link_fieldname": "meeting"
+  }
+ ],
+ "modified": "2021-07-08 16:41:18.296145",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Schedule Meeting",

@@ -30,6 +30,7 @@
  ],
  "fields": [
   {
+   "collapsible": 1,
    "fieldname": "action_section",
    "fieldtype": "Section Break",
    "label": "Action Details"
@@ -65,6 +66,7 @@
    "read_only": 1
   },
   {
+   "collapsible": 1,
    "fieldname": "sub_goal_section",
    "fieldtype": "Section Break",
    "label": "Sub Goal Details"
@@ -100,6 +102,7 @@
    "read_only": 1
   },
   {
+   "collapsible": 1,
    "fieldname": "program_details_section",
    "fieldtype": "Section Break",
    "label": "Program Details"
@@ -161,7 +164,7 @@
  "in_create": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-06-09 15:11:56.946995",
+ "modified": "2021-07-07 16:29:38.513923",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Strategic Actions",

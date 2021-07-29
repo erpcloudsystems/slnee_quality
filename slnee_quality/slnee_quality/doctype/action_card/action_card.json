@@ -8,18 +8,18 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "posting_date",
-  "action_card_details_section",
-  "level_one",
   "naming_series",
+  "posting_date",
+  "request",
+  "column_break_2",
+  "procedure_repository",
+  "action_card_details_section",
+  "procedure_name",
   "action_goal",
   "column_break_5",
-  "level_two",
-  "request",
   "action_owner",
-  "column_break_8",
-  "level_three",
   "action_type",
+  "column_break_8",
   "beneficiaries",
   "job_roles_section",
   "number_of_action_executers",
@@ -30,16 +30,14 @@
   "limitations",
   "required_conditions",
   "column_break_18",
-  "action_executers",
+  "internal_action_executers",
+  "external_action_executers",
   "estimated_duration_for_execution",
   "privacy_level",
   "programs_tools_used",
-  "departments",
   "escalation_mechanism",
   "action_description_with_details_section",
   "action_description_details",
-  "systems_regulations_for_creating_action_section",
-  "systems_regulations_table",
   "performance_measurement_indicators_section",
   "performance_measurement_indicators",
   "used_templates_section",
@@ -51,43 +49,33 @@
    "default": "CARD-",
    "fieldname": "naming_series",
    "fieldtype": "Select",
-   "label": "Action Code",
+   "hidden": 1,
+   "label": "Naming Series",
    "options": "CARD-",
    "read_only": 1
   },
   {
-   "fieldname": "level_one",
-   "fieldtype": "Data",
-   "label": "Level One"
-  },
-  {
-   "fieldname": "level_two",
-   "fieldtype": "Data",
-   "label": "Level Two"
-  },
-  {
-   "fieldname": "level_three",
-   "fieldtype": "Data",
-   "label": "Level Three"
-  },
-  {
-   "fetch_from": "request.applicant",
+   "fetch_from": "procedure_repository.procedure_owner",
    "fieldname": "action_owner",
    "fieldtype": "Data",
-   "label": "Action Owner"
+   "label": "Action Owner",
+   "read_only": 1
   },
   {
+   "fetch_from": "procedure_repository.procedure_type",
    "fieldname": "action_type",
    "fieldtype": "Select",
    "label": "Action Type",
-   "options": "Auto\nManual\nAuto & Manual"
+   "options": "\nAuto\nManual\nAuto & Manual",
+   "read_only": 1
   },
   {
    "fieldname": "beneficiaries",
-   "fieldtype": "Data",
-   "label": "Beneficiaries"
+   "fieldtype": "Table",
+   "options": "Beneficiaries Table"
   },
   {
+   "collapsible": 1,
    "fieldname": "action_card_details_section",
    "fieldtype": "Section Break",
    "label": "Action Card Details"
@@ -117,10 +105,11 @@
    "label": "Number Of Action Executers"
   },
   {
+   "fetch_from": "procedure_repository.repetition_rate",
    "fieldname": "usage_rate",
    "fieldtype": "Select",
    "label": "Usage Rate",
-   "options": "Daily\nMonthly\nSemi Annual\nYearly\nUpon Request"
+   "options": "\nDaily\nMonthly\nSemi Annual\nYearly\nUpon Request"
   },
   {
    "fieldname": "technical_systems_used",
@@ -135,11 +124,6 @@
   {
    "fieldname": "column_break_18",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "action_executers",
-   "fieldtype": "Data",
-   "label": "Action Executers"
   },
   {
    "fieldname": "estimated_duration_for_execution",
@@ -168,12 +152,6 @@
    "label": "Limitations"
   },
   {
-   "fieldname": "departments",
-   "fieldtype": "Table",
-   "label": "Paticipants",
-   "options": "Departments Table"
-  },
-  {
    "fieldname": "required_conditions",
    "fieldtype": "Small Text",
    "label": "Required Conditions"
@@ -198,17 +176,6 @@
    "fieldtype": "Table",
    "label": "Action Description Details",
    "options": "Action Description Details"
-  },
-  {
-   "fieldname": "systems_regulations_for_creating_action_section",
-   "fieldtype": "Section Break",
-   "label": "Systems & Regulations For Creating Action"
-  },
-  {
-   "fieldname": "systems_regulations_table",
-   "fieldtype": "Table",
-   "label": "Systems & Regulations",
-   "options": "Systems Regulations Table"
   },
   {
    "fieldname": "performance_measurement_indicators_section",
@@ -248,6 +215,36 @@
    "in_list_view": 1,
    "label": "Posting Date",
    "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "procedure_repository",
+   "fieldtype": "Link",
+   "label": "Procedure Code",
+   "options": "Procedure Repository",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "procedure_repository.procedure_name",
+   "fieldname": "procedure_name",
+   "fieldtype": "Data",
+   "label": "Procedure Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "internal_action_executers",
+   "fieldtype": "Table",
+   "label": "Internal Action Executers",
+   "options": "Departments Table"
+  },
+  {
+   "fieldname": "external_action_executers",
+   "fieldtype": "Table",
+   "label": "External Action Executers",
+   "options": "External Action Executers Table"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -258,7 +255,7 @@
    "link_fieldname": "action_card"
   }
  ],
- "modified": "2021-06-09 15:21:27.784683",
+ "modified": "2021-07-06 20:21:04.616388",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Action Card",

@@ -25,7 +25,6 @@ class Mission(Document):
 		self.update_stage_table()
 		self.update_percent_complete()
 
-
 	def update_mission_table(self):
 		q1 = frappe.db.sql("""update `tabMissions Table` set status = %s where
 						name=%s """, (self.status,self.mission_t))

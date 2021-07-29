@@ -7,6 +7,7 @@
  "engine": "InnoDB",
  "field_order": [
   "naming_series",
+  "meeting",
   "meeting_subject",
   "meeting_location",
   "meeting_date",
@@ -125,8 +126,8 @@
   },
   {
    "fieldname": "meeting_duration",
-   "fieldtype": "Data",
-   "label": "Meeting Duration"
+   "fieldtype": "Int",
+   "label": "Meeting Duration (Hours)"
   },
   {
    "fieldname": "meeting_no",
@@ -141,12 +142,23 @@
   {
    "fieldname": "column_break_17",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "meeting",
+   "fieldtype": "Link",
+   "label": "Meeting",
+   "options": "Schedule Meeting"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2021-06-27 04:08:32.120265",
+ "links": [
+  {
+   "link_doctype": "Schedule Meeting",
+   "link_fieldname": "meeting_record"
+  }
+ ],
+ "modified": "2021-07-08 16:41:47.934994",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Meeting Record",

@@ -86,7 +86,7 @@
    "property": "search_fields",
    "property_type": "Data",
    "row_name": null,
-   "value": "plan_name,plan_code"
+   "value": "plan_name"
   },
   {
    "_assign": null,

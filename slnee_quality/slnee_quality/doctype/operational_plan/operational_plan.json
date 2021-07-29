@@ -10,7 +10,6 @@
  "field_order": [
   "naming_series",
   "plan_details_section",
-  "plan_code",
   "plan_name",
   "plan_description",
   "column_break_5",
@@ -42,15 +41,6 @@
    "fieldname": "plan_details_section",
    "fieldtype": "Section Break",
    "label": "Plan Details"
-  },
-  {
-   "fieldname": "plan_code",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Plan Code",
-   "reqd": 1,
-   "unique": 1
   },
   {
    "fieldname": "plan_name",
@@ -111,6 +101,7 @@
    "options": "Departments Table"
   },
   {
+   "collapsible": 1,
    "fieldname": "actions_details",
    "fieldtype": "Section Break",
    "label": "Program Details"
@@ -138,8 +129,10 @@
    "read_only": 1
   },
   {
+   "collapsible": 1,
    "fieldname": "section_break_16",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Stages & Missions"
   },
   {
    "fieldname": "stages_table",
@@ -148,6 +141,7 @@
    "options": "Stages Table"
   },
   {
+   "allow_on_submit": 1,
    "depends_on": "eval:!(doc.__islocal) && doc.missions_table",
    "fieldname": "missions_table",
    "fieldtype": "Table",
@@ -178,7 +172,7 @@
    "link_fieldname": "operational_plan"
   }
  ],
- "modified": "2021-06-09 15:14:36.627195",
+ "modified": "2021-07-07 17:16:21.553567",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Operational Plan",

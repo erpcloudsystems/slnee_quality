@@ -1,0 +1,40 @@
+{
+ "actions": [],
+ "creation": "2021-07-06 21:02:16.313004",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "input_code",
+  "input_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "input_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Input Code",
+   "options": "Procedure Inputs"
+  },
+  {
+   "fetch_from": "input_code.name1",
+   "fieldname": "input_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Input Name",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-07-06 21:02:16.313004",
+ "modified_by": "Administrator",
+ "module": "Slnee Quality",
+ "name": "Procedure Inputs Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
