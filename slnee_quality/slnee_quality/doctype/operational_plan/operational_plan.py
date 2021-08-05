@@ -18,33 +18,54 @@ from frappe.model.document import Document
 
 class OperationalPlan(Document):
 	def validate(self):
-		for x in self.missions_table:
-			if self.workflow_state == "Approved" and not x.mission_created:
-				self.create_missions()
-				x.mission_created = 1
+		if self.workflow_state == "Approved":
+			self.create_missions()
 
 	def on_update_after_submit(self):
-		for x in self.missions_table:
-			if self.workflow_state == "Approved" and not x.mission_created:
-				self.create_missions()
-				x.mission_created = 1
+		if self.workflow_state == "Approved":
+			self.create_missions()
 
 	def create_missions(self):
 		for mission in self.missions_table:
-			self.mission_details(mission)
+			if not mission.mission_no:
+				self.mission_details(mission)
 
 	def mission_details(self, mission):
-			return frappe.get_doc(dict(
-			doctype='Mission',
-			stage=mission.stage_name,
-			operational_plan=self.name,
-			mission_t= mission.name,
-			status= mission.status,
-			subject= mission.subject,
-			start_date= mission.start_date,
-			duration= mission.duration,
-			description= mission.description
-		)).insert()
+		doc = frappe.get_doc(dict(
+		doctype='Mission',
+		stage=mission.stage_name,
+		operational_plan=self.name,
+		mission_t= mission.name,
+		status= mission.status,
+		subject= mission.subject,
+		start_date= mission.start_date,
+		mission_weight=mission.mission_weight,
+		unit_of_execution_duration= mission.unit_of_execution_duration,
+		duration= mission.duration,
+		description= mission.description
+		))
+		doc.insert()
+		frappe.db.set_value('Missions Table', mission.name, 'mission_no', doc.name)
+		self.reload()
 
 
 	pass
+
+
+@frappe.whitelist()
+def calendar_view(start, end):
+	if not frappe.has_permission("Shows", "read"):
+		raise frappe.PermissionError
+
+	return frappe.db.sql("""select
+                timestamp(`start_date`) as start,
+                timestamp(`end_date`) as end,
+                name,
+                CONCAT_WS(' - ',name,plan_name) as subject,
+                workflow_state as status
+
+        from `tabOperational Plan`
+        where `posting_date` between %(start)s and %(end)s""", {
+		"start": start,
+		"end": end
+	}, as_dict=True)

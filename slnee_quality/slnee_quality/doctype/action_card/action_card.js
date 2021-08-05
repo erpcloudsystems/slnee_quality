@@ -12,3 +12,7 @@ frappe.ui.form.on("Action Card", {
 		});
 	}
 });
+
+frappe.ui.form.on("Action Card", "on_submit", function(frm) {
+    frappe.db.set_value("Business Engineering Request",  cur_frm.doc.request, "action_card", cur_frm.doc.name);
+});

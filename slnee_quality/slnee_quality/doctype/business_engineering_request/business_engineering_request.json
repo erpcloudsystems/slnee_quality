@@ -41,7 +41,6 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Applicant",
-   "read_only": 1,
    "reqd": 1
   },
   {
@@ -51,14 +50,12 @@
    "in_standard_filter": 1,
    "label": "Request Type",
    "options": "\nAction Documentation Request\nAction Improvement Request\nDevelopment Study Request\nAction Modification Request",
-   "read_only": 1,
    "reqd": 1
   },
   {
    "fieldname": "applicants_remarks",
    "fieldtype": "Small Text",
-   "label": "Applicant's Remarks",
-   "read_only": 1
+   "label": "Applicant's Remarks"
   },
   {
    "fieldname": "column_break_4",
@@ -72,26 +69,19 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Posting Date",
-   "read_only": 1,
    "reqd": 1
   },
   {
    "fieldname": "attach_7",
-   "fieldtype": "Attach",
-   "hidden": 1,
-   "read_only": 1
+   "fieldtype": "Attach"
   },
   {
    "fieldname": "attach_8",
-   "fieldtype": "Attach",
-   "hidden": 1,
-   "read_only": 1
+   "fieldtype": "Attach"
   },
   {
    "fieldname": "attach_9",
-   "fieldtype": "Attach",
-   "hidden": 1,
-   "read_only": 1
+   "fieldtype": "Attach"
   },
   {
    "depends_on": "eval:!(doc.__islocal)",
@@ -151,7 +141,6 @@
    "read_only": 1
   }
  ],
- "in_create": 1,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [
@@ -164,7 +153,7 @@
    "link_fieldname": "request"
   }
  ],
- "modified": "2021-06-09 15:20:20.910459",
+ "modified": "2021-08-03 17:43:27.076394",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Business Engineering Request",

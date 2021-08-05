@@ -14,7 +14,7 @@ def calendar_view(start, end):
                 timestamp(`date`, start_time) as start,
                 timestamp(`date`, end_time) as end,
                 name,
-                subject as title,
+                subject,
                 color,
                 status
                 

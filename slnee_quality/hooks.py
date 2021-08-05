@@ -173,7 +173,4 @@ user_data_fields = [
 # 	"slnee_quality.auth.validate"
 # ]
 
-# Calendar View
-# --------------
 
-calendar = ["Schedule Meeting"]

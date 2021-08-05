@@ -28,22 +28,23 @@ class Mission(Document):
 	def update_mission_table(self):
 		q1 = frappe.db.sql("""update `tabMissions Table` set status = %s where
 						name=%s """, (self.status,self.mission_t))
+
 		return q1
 
 	def update_stage_table(self):
 		stage = frappe.db.sql("""select stage from `tabMissions Table` where name=%s """, self.mission_t)[0][0]
 
-		missions_counts = frappe.db.count('Missions Table', dict(stage=stage))
+		total_missions_weight = frappe.db.sql("""select sum(mission_weight) from `tabMissions Table` where
+				stage=%s """, stage)[0][0]
 
-
-
-		completed_missions = frappe.db.sql("""select count(name) from `tabMissions Table` where
+		completed_missions_weight = frappe.db.sql("""select sum(mission_weight) from `tabMissions Table` where
 				stage=%s and status = 'Completed' """, stage)[0][0]
 
-		completed_percent = flt((flt(completed_missions,2)/flt(missions_counts,2))*100,2)
+		percent = flt((flt(completed_missions_weight,2)/flt(total_missions_weight,2))*100,2)
 
 		q2 = frappe.db.sql("""update `tabStages Table` set stage_progress = %s where
-								name=%s """, (completed_percent, stage))
+										name=%s """, (percent, stage))
+
 		return q2
 
 

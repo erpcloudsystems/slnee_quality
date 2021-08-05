@@ -15,6 +15,7 @@
   "column_break_4",
   "posting_date",
   "start_date",
+  "mission_weight",
   "unit_of_execution_duration",
   "duration",
   "mission_details_section",
@@ -104,11 +105,16 @@
    "fieldtype": "Select",
    "label": "Unit Of Execution Duration",
    "options": "\nDay\nWeek\nMonth\nYear"
+  },
+  {
+   "fieldname": "mission_weight",
+   "fieldtype": "Int",
+   "label": "Mission Weight"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-07-07 17:44:19.272489",
+ "modified": "2021-08-03 13:50:29.565498",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Mission",

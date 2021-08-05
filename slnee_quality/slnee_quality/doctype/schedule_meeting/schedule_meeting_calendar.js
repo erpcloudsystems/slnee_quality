@@ -1,18 +1,6 @@
 // Copyright (c) 2015, Frappe Technologies Pvt. Ltd. and Contributors
 // License: GNU General Public License v3. See license.txt
 
-frappe.views.calendar["Schedule Meeting"] = {
-	field_map: {
-		"start": "start",
-		"end": "end",
-		"id": "name",
-		"title": "subject",
-		"status": "status"
-	},
-
-	get_events_method: "frappe.desk.doctype.event.event.get_events"
-}
-
 frappe.views.calendar['Schedule Meeting'] = {
     field_map: {
         start: 'start',
@@ -20,8 +8,10 @@ frappe.views.calendar['Schedule Meeting'] = {
         id: 'name',
         title: 'subject',
         status: 'status',
+        allDay: "all_day",
         color: 'color'
     },
-    order_by: 'end',
+
+    order_by: 'date',
     get_events_method: 'slnee_quality.slnee_quality.doctype.schedule_meeting.schedule_meeting.calendar_view'
 }
