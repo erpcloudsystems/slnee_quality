@@ -64,3 +64,18 @@ frappe.ui.form.on('Strategic Plan Program',{
 //            frappe.throw("Please Select Only One Strategic Goal");
 //        }
 //});
+
+frappe.ui.form.on("Strategic Plan Program",{
+    setup: function(frm) {
+		cur_frm.fields_dict["internal_beneficiaries"].grid.get_field("employee").get_query = function(doc, cdt, cdn)
+		{
+		    var d = locals[cdt][cdn];
+			return {
+				filters:  [
+					["Employee","department","in", d.department],
+				]
+
+					};
+		};
+	}
+});

@@ -65,3 +65,18 @@ frappe.ui.form.on("Operational Plan","program", function(frm){
     });
     }
 });
+
+frappe.ui.form.on("Operational Plan",{
+    setup: function(frm) {
+		cur_frm.fields_dict["departments"].grid.get_field("employee").get_query = function(doc, cdt, cdn)
+		{
+		    var d = locals[cdt][cdn];
+			return {
+				filters:  [
+					["Employee","department","in", d.department],
+				]
+
+					};
+		};
+	}
+});

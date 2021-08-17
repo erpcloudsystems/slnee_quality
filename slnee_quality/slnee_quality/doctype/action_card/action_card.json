@@ -25,16 +25,15 @@
   "number_of_action_executers",
   "usage_rate",
   "technical_systems_used",
+  "programs_tools_used",
   "inputs",
   "outputs",
   "limitations",
-  "required_conditions",
   "column_break_18",
   "internal_action_executers",
   "external_action_executers",
   "estimated_duration_for_execution",
   "privacy_level",
-  "programs_tools_used",
   "escalation_mechanism",
   "action_description_with_details_section",
   "action_description_details",
@@ -113,8 +112,9 @@
   },
   {
    "fieldname": "technical_systems_used",
-   "fieldtype": "Data",
-   "label": "Technical Systems Used"
+   "fieldtype": "Table",
+   "label": "Technical Systems Used",
+   "options": "Technical Systems Used Table"
   },
   {
    "fieldname": "inputs",
@@ -138,8 +138,9 @@
   },
   {
    "fieldname": "programs_tools_used",
-   "fieldtype": "Data",
-   "label": "Programs & Tools Used"
+   "fieldtype": "Table",
+   "label": "Programs & Tools Used",
+   "options": "Programs And Tools Used Table"
   },
   {
    "fieldname": "outputs",
@@ -148,13 +149,9 @@
   },
   {
    "fieldname": "limitations",
-   "fieldtype": "Data",
-   "label": "Limitations"
-  },
-  {
-   "fieldname": "required_conditions",
-   "fieldtype": "Small Text",
-   "label": "Required Conditions"
+   "fieldtype": "Table",
+   "label": "Limitations & Required Conditions",
+   "options": "Procedure Limitations And Conditions Table"
   },
   {
    "fieldname": "escalation_mechanism",
@@ -255,7 +252,7 @@
    "link_fieldname": "action_card"
   }
  ],
- "modified": "2021-07-06 20:21:04.616388",
+ "modified": "2021-08-10 17:19:32.335789",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Action Card",

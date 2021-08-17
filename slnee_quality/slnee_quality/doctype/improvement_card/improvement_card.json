@@ -37,10 +37,12 @@
  ],
  "fields": [
   {
+   "allow_on_submit": 1,
    "fieldname": "request",
    "fieldtype": "Link",
    "label": "Request",
-   "options": "Business Engineering Request"
+   "options": "Business Engineering Request",
+   "read_only": 1
   },
   {
    "collapsible": 1,
@@ -194,7 +196,7 @@
    "link_fieldname": "improvement_card"
   }
  ],
- "modified": "2021-07-07 16:34:12.561160",
+ "modified": "2021-08-17 13:43:21.735014",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Improvement Card",
