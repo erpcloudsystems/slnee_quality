@@ -79,3 +79,18 @@ frappe.ui.form.on("Strategic Plan Program",{
 		};
 	}
 });
+
+frappe.ui.form.on("Strategic Plan Program",{
+    setup: function(frm) {
+		cur_frm.fields_dict["internal_direct_relationship_holders"].grid.get_field("employee").get_query = function(doc, cdt, cdn)
+		{
+		    var d = locals[cdt][cdn];
+			return {
+				filters:  [
+					["Employee","department","in", d.department],
+				]
+
+					};
+		};
+	}
+});
