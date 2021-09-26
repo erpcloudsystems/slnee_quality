@@ -1,29 +1,28 @@
 {
  "actions": [],
- "creation": "2021-07-06 20:20:28.625946",
+ "creation": "2021-09-26 14:56:58.284001",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "entity"
+  "department"
  ],
  "fields": [
   {
-   "fetch_from": "code.entity",
-   "fieldname": "entity",
+   "fieldname": "department",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Entity",
-   "options": "External Action Executers"
+   "label": "Department",
+   "options": "Department"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2021-09-26 14:50:14.519014",
+ "modified": "2021-09-26 14:56:58.284001",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
- "name": "External Action Executers Table",
+ "name": "Deps Table",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",

@@ -35,9 +35,10 @@ class StrategicPlanProgram(Document):
 			action_name=action.action_name,
 			action_code=action.action_code,
 			action_description=action.action_description,
-			sub_goal_name=action.sub_goal_name,
-			sub_goal_code=action.sub_goal_code,
-			sub_goal_description=action.sub_goal_description
+			action_owner=action.action_owner,
+			start_date=action.start_date,
+			target_stakeholders=action.target_stakeholders,
+			end_date=action.end_date
 		)).insert()
 
 	pass

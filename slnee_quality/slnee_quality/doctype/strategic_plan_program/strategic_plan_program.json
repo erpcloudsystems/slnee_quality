@@ -26,8 +26,6 @@
   "column_break_9",
   "program_number",
   "program_execution_term",
-  "unit_of_execution_duration",
-  "expected_execution_duration",
   "program_main_outputs",
   "desired_benefits",
   "key_success_factors",
@@ -86,8 +84,9 @@
   },
   {
    "fieldname": "execution_nature",
-   "fieldtype": "Data",
-   "label": "Execution Nature"
+   "fieldtype": "Table",
+   "label": "Execution Nature",
+   "options": "Execution Nature Table"
   },
   {
    "fieldname": "column_break_9",
@@ -138,6 +137,7 @@
    "collapsible": 1,
    "fieldname": "sub_goals_section",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Sub Goals Details"
   },
   {
@@ -150,11 +150,6 @@
    "read_only": 1
   },
   {
-   "fieldname": "expected_execution_duration",
-   "fieldtype": "Int",
-   "label": " Expected Execution Duration"
-  },
-  {
    "default": "PROG-",
    "fieldname": "naming_series",
    "fieldtype": "Select",
@@ -165,12 +160,12 @@
   {
    "fieldname": "sub_goals_table",
    "fieldtype": "Table",
+   "hidden": 1,
    "label": "Sub Goals",
    "options": "Sub Goals"
   },
   {
    "collapsible": 1,
-   "depends_on": "eval:!(doc.__islocal) && doc.sub_goals_table",
    "fieldname": "actions_section",
    "fieldtype": "Section Break",
    "label": "Actions Details"
@@ -196,16 +191,10 @@
    "reqd": 1
   },
   {
-   "fieldname": "unit_of_execution_duration",
-   "fieldtype": "Select",
-   "label": "Unit Of Execution Duration",
-   "options": "\nDay\nWeek\nMonth\nYear"
-  },
-  {
    "fieldname": "internal_beneficiaries",
    "fieldtype": "Table",
    "label": "Internal Beneficiaries",
-   "options": "Departments Table"
+   "options": "Deps Table"
   },
   {
    "fieldname": "external_beneficiaries",
@@ -217,7 +206,7 @@
    "fieldname": "internal_direct_relationship_holders",
    "fieldtype": "Table",
    "label": "Internal Direct Relationship Holders",
-   "options": "Departments Table"
+   "options": "Deps Table"
   },
   {
    "fieldname": "external_direct_relationship_holders",
@@ -238,7 +227,7 @@
    "link_fieldname": "program"
   }
  ],
- "modified": "2021-07-07 17:12:22.291766",
+ "modified": "2021-09-26 15:21:44.047885",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Strategic Plan Program",

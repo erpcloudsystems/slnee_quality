@@ -55,6 +55,7 @@
   {
    "fieldname": "applicants_remarks",
    "fieldtype": "Small Text",
+   "in_list_view": 1,
    "label": "Applicant's Remarks"
   },
   {
@@ -153,7 +154,7 @@
    "link_fieldname": "request"
   }
  ],
- "modified": "2021-08-03 17:43:27.076394",
+ "modified": "2021-09-26 14:37:28.213076",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Business Engineering Request",

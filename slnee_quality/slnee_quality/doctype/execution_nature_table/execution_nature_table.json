@@ -1,29 +1,36 @@
 {
  "actions": [],
- "creation": "2021-07-06 20:20:28.625946",
+ "creation": "2021-09-26 15:08:26.507278",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "entity"
+  "department",
+  "job_role"
  ],
  "fields": [
   {
-   "fetch_from": "code.entity",
-   "fieldname": "entity",
+   "fieldname": "department",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Entity",
-   "options": "External Action Executers"
+   "label": "Agencies / Managements",
+   "options": "Department"
+  },
+  {
+   "fieldname": "job_role",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Job Role",
+   "options": "\nEssential\nSupportive\nCommon"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2021-09-26 14:50:14.519014",
+ "modified": "2021-09-26 15:09:30.297832",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
- "name": "External Action Executers Table",
+ "name": "Execution Nature Table",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",

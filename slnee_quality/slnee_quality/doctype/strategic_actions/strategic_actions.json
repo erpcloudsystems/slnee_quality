@@ -9,17 +9,16 @@
  "engine": "InnoDB",
  "field_order": [
   "naming_series",
-  "posting_date",
-  "action_section",
+  "action_details_section",
   "action_code",
+  "action_owner",
+  "start_date",
+  "target_stakeholders",
+  "column_break_10",
   "action_name",
-  "column_break_9",
+  "program_name",
+  "end_date",
   "action_description",
-  "sub_goal_section",
-  "sub_goal_code",
-  "sub_goal_name",
-  "column_break_4",
-  "sub_goal_description",
   "program_details_section",
   "linked_program",
   "program_name",
@@ -30,76 +29,27 @@
  ],
  "fields": [
   {
-   "collapsible": 1,
-   "fieldname": "action_section",
-   "fieldtype": "Section Break",
-   "label": "Action Details"
-  },
-  {
-   "columns": 1,
+   "columns": 2,
    "fieldname": "action_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Action Name",
-   "read_only": 1,
-   "unique": 1
+   "label": "Action Name"
   },
   {
-   "columns": 1,
+   "columns": 2,
+   "fetch_from": "action.action_code",
    "fieldname": "action_code",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Action Code",
-   "read_only": 1,
-   "unique": 1
-  },
-  {
-   "fieldname": "column_break_9",
-   "fieldtype": "Column Break"
+   "label": "Action Code"
   },
   {
    "columns": 2,
+   "fetch_from": "action.action_description",
    "fieldname": "action_description",
    "fieldtype": "Small Text",
    "in_list_view": 1,
-   "label": "Action Description",
-   "read_only": 1
-  },
-  {
-   "collapsible": 1,
-   "fieldname": "sub_goal_section",
-   "fieldtype": "Section Break",
-   "label": "Sub Goal Details"
-  },
-  {
-   "columns": 1,
-   "fetch_from": "sub_goal.sub_goal_name",
-   "fieldname": "sub_goal_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Sub Goal Name",
-   "read_only": 1
-  },
-  {
-   "columns": 1,
-   "fetch_from": "sub_goal.sub_goal_code",
-   "fieldname": "sub_goal_code",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Sub Goal Code",
-   "read_only": 1
-  },
-  {
-   "fieldname": "column_break_4",
-   "fieldtype": "Column Break"
-  },
-  {
-   "columns": 2,
-   "fetch_from": "sub_goal.sub_goal_description",
-   "fieldname": "sub_goal_description",
-   "fieldtype": "Small Text",
-   "label": "Sub Goal Description",
-   "read_only": 1
+   "label": "Action Description"
   },
   {
    "collapsible": 1,
@@ -150,21 +100,49 @@
   {
    "fieldname": "program_name",
    "fieldtype": "Data",
-   "label": "Program Name",
-   "read_only": 1
+   "label": "Program Name"
   },
   {
-   "default": "Today",
-   "fieldname": "posting_date",
+   "fieldname": "action_details_section",
+   "fieldtype": "Section Break",
+   "label": "Action Details"
+  },
+  {
+   "columns": 2,
+   "fieldname": "action_owner",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Entity Action Owner"
+  },
+  {
+   "fieldname": "start_date",
    "fieldtype": "Date",
-   "label": "Posting Date",
-   "reqd": 1
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "target_stakeholders",
+   "fieldtype": "Data",
+   "label": "Target Stakeholders"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "program_name",
+   "fieldtype": "Data",
+   "label": "Program Name"
   }
  ],
  "in_create": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-07-07 16:29:38.513923",
+ "modified": "2021-09-26 15:55:20.188767",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Strategic Actions",
