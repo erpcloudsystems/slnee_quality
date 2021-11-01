@@ -1,0 +1,31 @@
+{
+ "chart_name": "Stages Chart",
+ "chart_type": "Report",
+ "creation": "2021-10-31 17:37:25.341857",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "dynamic_filters_json": "{}",
+ "filters_json": "{}",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "modified": "2021-11-01 11:31:59.305233",
+ "modified_by": "Administrator",
+ "module": "Slnee Quality",
+ "name": "Stages Chart",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "report_name": "percentage of missions",
+ "time_interval": "Yearly",
+ "timeseries": 0,
+ "timespan": "Last Year",
+ "type": "Bar",
+ "use_report_chart": 0,
+ "x_field": "name",
+ "y_axis": [
+  {
+   "y_field": "stage_progress"
+  }
+ ]
+}

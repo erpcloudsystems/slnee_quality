@@ -1,0 +1,57 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2021-10-31 10:33:18.062494",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "strategic_plan",
+   "fieldtype": "Link",
+   "label": "Strategic Plan",
+   "mandatory": 0,
+   "options": "Strategic Plan",
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "name",
+   "fieldtype": "Link",
+   "label": "Operational Plan",
+   "mandatory": 0,
+   "options": "Operational Plan",
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2021-10-31 18:58:47.223549",
+ "modified_by": "Administrator",
+ "module": "Slnee Quality",
+ "name": "percentage of missions",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Operational Plan",
+ "report_name": "percentage of missions",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}

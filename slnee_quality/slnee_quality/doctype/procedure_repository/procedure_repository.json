@@ -48,8 +48,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Repetition Rate",
-   "options": "\nDaily\nWeekly\nMonthly\nAnnually",
-   "reqd": 1
+   "options": "\nDaily\nWeekly\nMonthly\nAnnually"
   },
   {
    "fieldname": "procedure_owner",
@@ -88,8 +87,7 @@
    "fieldname": "procedure_type",
    "fieldtype": "Select",
    "label": "Procedure Type",
-   "options": "\nAuto\nManual\nAuto & Manual",
-   "reqd": 1
+   "options": "\nAuto\nManual\nAuto & Manual"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -100,7 +98,7 @@
    "link_fieldname": "procedure_repository"
   }
  ],
- "modified": "2021-07-06 21:41:41.315738",
+ "modified": "2021-10-12 13:06:50.031016",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Procedure Repository",

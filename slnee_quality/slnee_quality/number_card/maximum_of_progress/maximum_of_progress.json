@@ -1,0 +1,22 @@
+{
+ "creation": "2021-10-31 19:00:36.261680",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "filters_json": "{\"strategic_plan\":\"SPLAN-00032\"}",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "label": "Maximum of Progress",
+ "modified": "2021-10-31 19:01:33.320834",
+ "modified_by": "Administrator",
+ "module": "Slnee Quality",
+ "name": "Maximum of Progress",
+ "owner": "Administrator",
+ "report_field": "progress",
+ "report_function": "Maximum",
+ "report_name": "percentage of missions",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Daily",
+ "type": "Report"
+}

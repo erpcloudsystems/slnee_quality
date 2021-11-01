@@ -9,16 +9,18 @@
  ],
  "fields": [
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "beneficiaries",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Beneficiaries"
+   "label": "Beneficiaries",
+   "options": "Beneficiaries Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2021-07-06 19:54:59.697747",
+ "modified": "2021-10-13 12:04:59.558508",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Beneficiaries Table",

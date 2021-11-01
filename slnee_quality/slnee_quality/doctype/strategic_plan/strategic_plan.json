@@ -22,6 +22,7 @@
   "values",
   "strategic_goals_section",
   "strategic_goals_table",
+  "goals",
   "amended_from"
  ],
  "fields": [
@@ -93,8 +94,7 @@
    "fieldname": "strategic_goals_table",
    "fieldtype": "Table",
    "label": "Main Goals",
-   "options": "Strategic Goals",
-   "reqd": 1
+   "options": "Strategic Goals"
   },
   {
    "default": "SPLAN-",
@@ -115,6 +115,13 @@
    "fieldname": "possibles",
    "fieldtype": "Small Text",
    "label": "Possibles"
+  },
+  {
+   "fieldname": "goals",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Goals",
+   "options": "Goals"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -133,7 +140,7 @@
    "link_fieldname": "strategic_plan"
   }
  ],
- "modified": "2021-09-26 15:01:31.250013",
+ "modified": "2021-10-20 15:10:16.924302",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Strategic Plan",

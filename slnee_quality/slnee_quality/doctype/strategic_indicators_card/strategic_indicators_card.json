@@ -14,6 +14,8 @@
   "indicator_owner",
   "measurement_responsibilty",
   "description",
+  "strategic_plan",
+  "strategic_goals_table",
   "column_break_7",
   "posting_date",
   "calculation_method",
@@ -108,11 +110,23 @@
    "fieldtype": "Date",
    "label": "Posting Date",
    "reqd": 1
+  },
+  {
+   "fieldname": "strategic_plan",
+   "fieldtype": "Link",
+   "label": "Strategic Plan",
+   "options": "Strategic Plan"
+  },
+  {
+   "fieldname": "strategic_goals_table",
+   "fieldtype": "Table",
+   "label": "Main Goals",
+   "options": "Strategic Goals"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-06-09 15:13:09.406871",
+ "modified": "2021-10-20 15:17:26.261000",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Strategic Indicators Card",
