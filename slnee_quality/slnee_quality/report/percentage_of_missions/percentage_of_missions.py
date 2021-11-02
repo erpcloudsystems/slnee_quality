@@ -42,41 +42,24 @@ def get_columns():
             "width": 120
         },
         {
-            "label": _("Posting Date"),
-            "fieldname": "posting_date",
-            "fieldtype": "Date",
-            "width": 120
-        },
-        {
             "label": _("Plan Progress"),
             "fieldname": "progress",
             "fieldtype": "Percent",
             "width": 140
         },
         {
-            "label": _("Start Date"),
-            "fieldname": "start_date",
-            "fieldtype": "Date",
-            "width": 120
-        },
-		{
-			"label": _("End Date"),
-			"fieldname": "end_date",
-			"fieldtype": "Date",
-			"width": 120
-		},
-        {
-            "label": _("Stage Name"),
-            "fieldname": "stage_name",
+            "label": _("Count Of Stages"),
+            "fieldname": "count_of_phase_stages",
             "fieldtype": "Data",
-            "width": 120
+            "width": 150
         },
         {
-            "label": _("Stage Progress"),
-            "fieldname": "stage_progress",
-            "fieldtype": "Percent",
-            "width": 120
+            "label": _("Count Of Missions"),
+            "fieldname": "count_of_missions",
+            "fieldtype": "Data",
+            "width": 150
         }
+
     ]
 
 
@@ -92,22 +75,15 @@ def get_item_price_qty_data(filters):
         conditions += " and `tabOperational Plan`.name =%(name)s"
     if filters.get("strategic_plan"):
         conditions += " and `tabOperational Plan`.strategic_plan =%(strategic_plan)s"
-    if filters.get("from_date"):
-        conditions += " and `tabOperational Plan`.posting_date>=%(from_date)s"
-    if filters.get("to_date"):
-        conditions += " and `tabOperational Plan`.posting_date<=%(to_date)s"
     item_results = frappe.db.sql("""
-                select
+                select distinct
                         `tabOperational Plan`.name as name,
+						(select count(stage_name) from `tabStages Table`  where `tabStages Table`.parent = `tabOperational Plan`.name {conditions} ) as count_of_phase_stages,
+						(select count(stage) from `tabMissions Table`  where `tabMissions Table`.parent = `tabOperational Plan`.name {conditions} ) as count_of_missions,						
                         `tabOperational Plan`.plan_name as plan_name,                    
                         `tabOperational Plan`.program as program,
-                        `tabOperational Plan`.strategic_plan as strategic_plan,
-                        `tabOperational Plan`.posting_date as posting_date,
-                        `tabOperational Plan`.start_date as start_date,
-                        `tabOperational Plan`.end_date as end_date,
-                        `tabOperational Plan`.progress as progress,
-                        `tabStages Table`.stage_name as stage_name,
-                        `tabStages Table`.stage_progress as stage_progress
+                        `tabOperational Plan`.strategic_plan as strategic_plan,                        
+                        `tabOperational Plan`.progress as progress
                                                                            
                 from
                 `tabOperational Plan` join `tabStages Table`
@@ -132,16 +108,13 @@ def get_item_price_qty_data(filters):
                 'name': item_dict.name,
                 'plan_name': item_dict.plan_name,
                 'program': item_dict.program,
-                'posting_date': item_dict.posting_date,
                 'strategic_plan': _(item_dict.strategic_plan),
-                'start_date': item_dict.start_date,
-                'end_date': item_dict.end_date,
                 'stage_name': item_dict.stage_name,
-                'no_of_missions': item_dict.no_of_missions,
+                'count_of_phase_stages': item_dict.count_of_phase_stages,
                 'stage_progress': item_dict.stage_progress,
                 'progress': item_dict.progress,
                 'message': item_dict.message,
-                'values': item_dict.x,
+                'count_of_missions': item_dict.count_of_missions,
                 'main_goals': item_dict.main_goals,
             }
             result.append(data)

@@ -1,7 +1,7 @@
 {
- "chart_name": "Stages Chart",
+ "chart_name": "Stages Chart 2",
  "chart_type": "Report",
- "creation": "2021-11-01 16:35:42.941092",
+ "creation": "2021-11-01 16:14:37.633537",
  "docstatus": 0,
  "doctype": "Dashboard Chart",
  "dynamic_filters_json": "{}",
@@ -10,10 +10,10 @@
  "idx": 0,
  "is_public": 0,
  "is_standard": 1,
- "modified": "2021-11-01 16:52:25.054405",
+ "modified": "2021-11-01 16:23:05.450091",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
- "name": "Stages Chart",
+ "name": "Stages Chart 2",
  "number_of_groups": 0,
  "owner": "Administrator",
  "report_name": "percentage of missions",
@@ -25,8 +25,8 @@
  "x_field": "name",
  "y_axis": [
   {
-   "color": "#4463F0",
-   "y_field": "count_of_phase_stages"
+   "color": "#761ACB",
+   "y_field": "progress"
   }
  ]
 }

@@ -1,0 +1,37 @@
+{
+ "chart_name": "percentage of missions",
+ "chart_type": "Report",
+ "creation": "2021-11-02 12:16:24.767368",
+ "custom_options": "{\"x_field\": \"strategic_plan\", \"chart_type\": \"Bar\", \"y_axis_fields\": [{\"idx\": 1, \"__islocal\": true, \"name\": \"row 1\", \"y_field\": \"count_of_phase_stages\"}, {\"idx\": 2, \"__islocal\": true, \"name\": \"row 2\", \"y_field\": \"count_of_missions\"}, {\"idx\": 3, \"__islocal\": true, \"name\": \"row 3\", \"y_field\": \"progress\"}], \"y_fields\": [\"count_of_phase_stages\", \"count_of_missions\", \"progress\"], \"colors\": [null, null, null]}",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "filters_json": "{}",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "modified": "2021-11-02 12:16:24.794870",
+ "modified_by": "Administrator",
+ "module": "Slnee Quality",
+ "name": "percentage of missions",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "report_name": "percentage of missions",
+ "time_interval": "Yearly",
+ "timeseries": 0,
+ "timespan": "Last Year",
+ "type": "Bar",
+ "use_report_chart": 0,
+ "x_field": "strategic_plan",
+ "y_axis": [
+  {
+   "y_field": "count_of_phase_stages"
+  },
+  {
+   "y_field": "count_of_missions"
+  },
+  {
+   "y_field": "progress"
+  }
+ ]
+}
