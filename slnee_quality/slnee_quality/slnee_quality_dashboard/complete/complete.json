@@ -14,7 +14,7 @@
    "width": "Full"
   },
   {
-   "chart": "percentage of missions",
+   "chart": "percentage of missions 2",
    "width": "Full"
   }
  ],
@@ -25,7 +25,7 @@
  "idx": 0,
  "is_default": 0,
  "is_standard": 1,
- "modified": "2021-11-02 12:20:34.540842",
+ "modified": "2021-11-03 12:28:13.546396",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "complete",

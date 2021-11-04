@@ -1,0 +1,35 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2021-11-03 17:59:30.353816",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2021-11-04 15:12:31.692019",
+ "modified_by": "Administrator",
+ "module": "Slnee Quality",
+ "name": "Percentage Of Missions 3",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Operational Plan",
+ "report_name": "Percentage Of Missions 3",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Planning Manager"
+  },
+  {
+   "role": "Quality User"
+  },
+  {
+   "role": "Quality Manager"
+  }
+ ]
+}

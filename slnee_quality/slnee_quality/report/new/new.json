@@ -1,0 +1,45 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2021-11-02 18:56:18.119500",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "strategic_plan",
+   "fieldtype": "Link",
+   "label": "Strategic Plan",
+   "mandatory": 0,
+   "options": "Strategic Plan",
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2021-11-02 19:11:57.591972",
+ "modified_by": "Administrator",
+ "module": "Slnee Quality",
+ "name": "New",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT \r\n`tabOperational Plan`.name as \"Name::150\",\r\n(select count(stage_name) from `tabStages Table`  where `tabStages Table`.parent = `tabOperational Plan`.name) as \"Count Of Stages::100\",\r\n(select count(stage) from `tabMissions Table`  where `tabMissions Table`.parent = `tabOperational Plan`.name ) as \"Count Of Missions::100\",\t\t\t\t\t\t\r\n`tabOperational Plan`.plan_name as \"Plane Name::200\",                    \r\n`tabOperational Plan`.program as \"Program::150\",\r\n`tabOperational Plan`.strategic_plan as \"Strategic Plan::100\",                        \r\n`tabOperational Plan`.progress as \"Progress::100\"\r\nFrom\r\n`tabOperational Plan` join `tabStages Table`\r\nWHERE\r\n`tabOperational Plan`.docstatus != 2\r\nand `tabStages Table`.parent = `tabOperational Plan`.name\r\nand `tabOperational Plan`.strategic_plan = %(strategic_plan)s",
+ "ref_doctype": "Operational Plan",
+ "report_name": "New",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Planning Manager"
+  },
+  {
+   "role": "Quality User"
+  },
+  {
+   "role": "Quality Manager"
+  }
+ ]
+}

@@ -58,6 +58,12 @@ def get_columns():
             "fieldname": "count_of_missions",
             "fieldtype": "Data",
             "width": 150
+        },
+        {
+            "label": _("Count Of Completed Missions"),
+            "fieldname": "count_of_completed_missions",
+            "fieldtype": "Data",
+            "width": 200
         }
 
     ]
@@ -79,12 +85,13 @@ def get_item_price_qty_data(filters):
                 select distinct
                         `tabOperational Plan`.name as name,
 						(select count(stage_name) from `tabStages Table`  where `tabStages Table`.parent = `tabOperational Plan`.name {conditions} ) as count_of_phase_stages,
-						(select count(stage) from `tabMissions Table`  where `tabMissions Table`.parent = `tabOperational Plan`.name {conditions} ) as count_of_missions,						
+						(select count(stage) from `tabMissions Table`  where `tabMissions Table`.parent = `tabOperational Plan`.name {conditions} ) as count_of_missions,
+						(select count(stage) from `tabMissions Table`  where `tabMissions Table`.parent = `tabOperational Plan`.name and `tabMissions Table`.status = "Completed"  {conditions} ) as count_of_completed_missions,												
                         `tabOperational Plan`.plan_name as plan_name,                    
                         `tabOperational Plan`.program as program,
                         `tabOperational Plan`.strategic_plan as strategic_plan,                        
                         `tabOperational Plan`.progress as progress
-                                                                           
+
                 from
                 `tabOperational Plan` join `tabStages Table`
                 where
@@ -108,14 +115,14 @@ def get_item_price_qty_data(filters):
                 'name': item_dict.name,
                 'plan_name': item_dict.plan_name,
                 'program': item_dict.program,
-                'strategic_plan': _(item_dict.strategic_plan),
+                'strategic_plan': item_dict.strategic_plan,
                 'stage_name': item_dict.stage_name,
                 'count_of_phase_stages': item_dict.count_of_phase_stages,
                 'stage_progress': item_dict.stage_progress,
                 'progress': item_dict.progress,
                 'message': item_dict.message,
                 'count_of_missions': item_dict.count_of_missions,
-                'main_goals': item_dict.main_goals,
+                'count_of_completed_missions': item_dict.count_of_completed_missions
             }
             result.append(data)
 

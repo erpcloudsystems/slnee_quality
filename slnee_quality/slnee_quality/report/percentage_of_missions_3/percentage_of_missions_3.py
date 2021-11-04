@@ -16,6 +16,19 @@ def execute(filters=None):
 def get_columns():
     return [
         {
+            "label": _("Strategic Indicators Card"),
+            "fieldname": "strategic_indicators_card",
+            "fieldtype": "Link",
+            "options": "Strategic Indicators Card",
+            "width": 200
+        },
+        {
+            "label": _("No Of Operational Plan"),
+            "fieldname": "no_of_operational_plan",
+            "fieldtype": "Data",
+            "width": 120
+        },
+        {
             "label": _("Strategic Plan"),
             "fieldname": "strategic_plan",
             "fieldtype": "Link",
@@ -58,6 +71,12 @@ def get_columns():
             "fieldname": "count_of_missions",
             "fieldtype": "Data",
             "width": 150
+        },
+        {
+            "label": _("Count Of Completed Missions"),
+            "fieldname": "count_of_completed_missions",
+            "fieldtype": "Data",
+            "width": 200
         }
 
     ]
@@ -79,14 +98,17 @@ def get_item_price_qty_data(filters):
                 select distinct
                         `tabOperational Plan`.name as name,
 						(select count(stage_name) from `tabStages Table`  where `tabStages Table`.parent = `tabOperational Plan`.name {conditions} ) as count_of_phase_stages,
-						(select count(stage) from `tabMissions Table`  where `tabMissions Table`.parent = `tabOperational Plan`.name {conditions} ) as count_of_missions,						
+						(select count(`tabOperational Plan`.name) from `tabOperational Plan` join `tabStrategic Indicators Card` join `tabStrategic Plan` where `tabOperational Plan`.strategic_plan = `tabStrategic Indicators Card`.strategic_plan and `tabOperational Plan`.strategic_plan = `tabStrategic Indicators Card`.strategic_plan ) as no_of_operational_plan,
+						(select `tabStrategic Indicators Card`.name from `tabStrategic Indicators Card`  where `tabOperational Plan`.strategic_plan = `tabStrategic Indicators Card`.strategic_plan) as strategic_indicators_card,
+						(select count(stage) from `tabMissions Table`  where `tabMissions Table`.parent = `tabOperational Plan`.name {conditions} ) as count_of_missions,
+						(select count(stage) from `tabMissions Table`  where `tabMissions Table`.parent = `tabOperational Plan`.name and `tabMissions Table`.status = "Completed"  {conditions} ) as count_of_completed_missions,												
                         `tabOperational Plan`.plan_name as plan_name,                    
                         `tabOperational Plan`.program as program,
                         `tabOperational Plan`.strategic_plan as strategic_plan,                        
                         `tabOperational Plan`.progress as progress
-                                                                           
+
                 from
-                `tabOperational Plan` join `tabStages Table`
+                `tabOperational Plan` join `tabStages Table` 
                 where
                 `tabOperational Plan`.docstatus != 2
                 and `tabStages Table`.parent = `tabOperational Plan`.name
@@ -108,14 +130,16 @@ def get_item_price_qty_data(filters):
                 'name': item_dict.name,
                 'plan_name': item_dict.plan_name,
                 'program': item_dict.program,
-                'strategic_plan': _(item_dict.strategic_plan),
+                'strategic_plan': item_dict.strategic_plan,
                 'stage_name': item_dict.stage_name,
                 'count_of_phase_stages': item_dict.count_of_phase_stages,
                 'stage_progress': item_dict.stage_progress,
                 'progress': item_dict.progress,
                 'message': item_dict.message,
                 'count_of_missions': item_dict.count_of_missions,
-                'main_goals': item_dict.main_goals,
+                'strategic_indicators_card': item_dict.strategic_indicators_card,
+                'no_of_operational_plan': item_dict.no_of_operational_plan,
+                'count_of_completed_missions': item_dict.count_of_completed_missions
             }
             result.append(data)
 
