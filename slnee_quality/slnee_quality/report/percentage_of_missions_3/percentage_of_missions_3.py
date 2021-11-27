@@ -23,10 +23,10 @@ def get_columns():
             "width": 200
         },
         {
-            "label": _("No Of Operational Plan"),
-            "fieldname": "no_of_operational_plan",
+            "label": _("Goal Name"),
+            "fieldname": "goal_name",
             "fieldtype": "Data",
-            "width": 120
+            "width": 250
         },
         {
             "label": _("Strategic Plan"),
@@ -34,6 +34,12 @@ def get_columns():
             "fieldtype": "Link",
             "options": "Strategic Plan",
             "width": 120
+        },
+        {
+            "label": _("Strategic Plan Name"),
+            "fieldname": "strategic_plan_name",
+            "fieldtype": "Data",
+            "width": 250
         },
         {
             "label": _("Operational Plan"),
@@ -51,7 +57,8 @@ def get_columns():
         {
             "label": _("Program"),
             "fieldname": _("program"),
-            "fieldtype": "Data",
+            "fieldtype": "Link",
+            "options": "Program",
             "width": 120
         },
         {
@@ -98,6 +105,7 @@ def get_item_price_qty_data(filters):
                 select distinct
                         `tabOperational Plan`.name as name,
 						(select count(stage_name) from `tabStages Table`  where `tabStages Table`.parent = `tabOperational Plan`.name {conditions} ) as count_of_phase_stages,
+						(select (goal_name) from `tabStrategic Goals`  where `tabStrategic Goals`.parent = `tabStrategic Indicators Card`.name {conditions} ) as goal_name,
 						(select count(`tabOperational Plan`.name) from `tabOperational Plan` join `tabStrategic Indicators Card` join `tabStrategic Plan` where `tabOperational Plan`.strategic_plan = `tabStrategic Indicators Card`.strategic_plan and `tabOperational Plan`.strategic_plan = `tabStrategic Indicators Card`.strategic_plan ) as no_of_operational_plan,
 						(select `tabStrategic Indicators Card`.name from `tabStrategic Indicators Card`  where `tabOperational Plan`.strategic_plan = `tabStrategic Indicators Card`.strategic_plan) as strategic_indicators_card,
 						(select count(stage) from `tabMissions Table`  where `tabMissions Table`.parent = `tabOperational Plan`.name {conditions} ) as count_of_missions,
@@ -105,10 +113,11 @@ def get_item_price_qty_data(filters):
                         `tabOperational Plan`.plan_name as plan_name,                    
                         `tabOperational Plan`.program as program,
                         `tabOperational Plan`.strategic_plan as strategic_plan,                        
+                        `tabOperational Plan`.strategic_plan_name as strategic_plan_name,                        
                         `tabOperational Plan`.progress as progress
 
                 from
-                `tabOperational Plan` join `tabStages Table` 
+                `tabOperational Plan` join `tabStages Table` join `tabStrategic Indicators Card`
                 where
                 `tabOperational Plan`.docstatus != 2
                 and `tabStages Table`.parent = `tabOperational Plan`.name
@@ -139,7 +148,9 @@ def get_item_price_qty_data(filters):
                 'count_of_missions': item_dict.count_of_missions,
                 'strategic_indicators_card': item_dict.strategic_indicators_card,
                 'no_of_operational_plan': item_dict.no_of_operational_plan,
-                'count_of_completed_missions': item_dict.count_of_completed_missions
+                'strategic_plan_name': item_dict.strategic_plan_name,
+                'count_of_completed_missions': item_dict.count_of_completed_missions,
+                'goal_name': item_dict.goal_name
             }
             result.append(data)
 
