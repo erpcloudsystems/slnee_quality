@@ -146,15 +146,11 @@
  "is_submittable": 1,
  "links": [
   {
-   "link_doctype": "Action Card",
-   "link_fieldname": "request"
-  },
-  {
    "link_doctype": "Improvement Card",
    "link_fieldname": "request"
   }
  ],
- "modified": "2021-09-26 14:37:28.213076",
+ "modified": "2021-11-28 13:28:07.996826",
  "modified_by": "Administrator",
  "module": "Slnee Quality",
  "name": "Business Engineering Request",
